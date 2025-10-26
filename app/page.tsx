@@ -33,26 +33,26 @@ export default function AuraWebsite() {
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
       {
         "symbols": [
-          {"description": "ES - S&P 500", "proName": "FOREXCOM:SPXUSD"},
-          {"description": "NQ - Nasdaq", "proName": "FOREXCOM:NSXUSD"},
-          {"description": "YM - Dow Jones", "proName": "FOREXCOM:DJI"},
-          {"description": "6E - Euro", "proName": "FX_IDC:EURUSD"},
-          {"description": "6B - British Pound", "proName": "FX_IDC:GBPUSD"},
-          {"description": "6J - Japanese Yen", "proName": "FX_IDC:USDJPY"},
-          {"description": "6S - Swiss Franc", "proName": "FX_IDC:USDCHF"},
-          {"description": "6A - Australian Dollar", "proName": "FX_IDC:AUDUSD"},
-          {"description": "GC - Gold", "proName": "TVC:GOLD"},
-          {"description": "SI - Silver", "proName": "TVC:SILVER"},
-          {"description": "BTC - Bitcoin", "proName": "BINANCE:BTCUSDT"},
-          {"description": "ETH - Ethereum", "proName": "BINANCE:ETHUSDT"},
-          {"description": "SOL - Solana", "proName": "BINANCE:SOLUSDT"}
+          {"description": "ES", "proName": "FOREXCOM:SPXUSD"},
+          {"description": "NQ", "proName": "FOREXCOM:NSXUSD"},
+          {"description": "YM", "proName": "FOREXCOM:DJI"},
+          {"description": "6E", "proName": "FX_IDC:EURUSD"},
+          {"description": "6B", "proName": "FX_IDC:GBPUSD"},
+          {"description": "6J", "proName": "FX_IDC:USDJPY"},
+          {"description": "6S", "proName": "FX_IDC:USDCHF"},
+          {"description": "6A", "proName": "FX_IDC:AUDUSD"},
+          {"description": "GC", "proName": "TVC:GOLD"},
+          {"description": "SI", "proName": "TVC:SILVER"},
+          {"description": "BTC", "proName": "BINANCE:BTCUSDT"},
+          {"description": "ETH", "proName": "BINANCE:ETHUSDT"},
+          {"description": "SOL", "proName": "BINANCE:SOLUSDT"}
         ],
         "showSymbolLogo": true,
         "isTransparent": true,
         "displayMode": "adaptive",
         "colorTheme": "light",
         "locale": "en",
-        "speed": 5
+        "speed": 7
       }
       </script>
     </div>
