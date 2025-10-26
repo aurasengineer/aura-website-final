@@ -25,7 +25,7 @@ export default function AuraWebsite() {
           </div>
         </div>
       </nav>
-      {/* TradingView Ticker */}
+{/* TradingView Ticker */}
 <div className="mt-[64px] w-full" dangerouslySetInnerHTML={{
   __html: `
     <div class="tradingview-widget-container">
@@ -43,13 +43,16 @@ export default function AuraWebsite() {
           {"description": "6A - Australian Dollar", "proName": "FX_IDC:AUDUSD"},
           {"description": "GC - Gold", "proName": "TVC:GOLD"},
           {"description": "SI - Silver", "proName": "TVC:SILVER"},
-          {"description": "HG - Copper", "proName": "ECONOMICS:USCOPF"}
+          {"description": "BTC - Bitcoin", "proName": "BINANCE:BTCUSDT"},
+          {"description": "ETH - Ethereum", "proName": "BINANCE:ETHUSDT"},
+          {"description": "SOL - Solana", "proName": "BINANCE:SOLUSDT"}
         ],
         "showSymbolLogo": true,
         "isTransparent": true,
         "displayMode": "adaptive",
         "colorTheme": "light",
-        "locale": "en"
+        "locale": "en",
+        "speed": 2
       }
       </script>
     </div>
@@ -66,7 +69,7 @@ export default function AuraWebsite() {
             Automated...
           </h1>
           <p className="text-xl text-black/70 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Stop manually marking charts. Aura indicators automate Quarterly Theory and Smart Money Technique concepts with clean, aesthetic visuals that enhance your analysis.
+            Stop manually marking charts… Aura&apos;s indicators automate Quarterly Theory and Smart Money Technique concepts with clean, aesthetic visuals that enhance your analysis…
           </p>
           
           <button className="bg-black text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-black/80 transition-colors inline-flex items-center gap-2">
