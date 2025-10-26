@@ -25,6 +25,36 @@ export default function AuraWebsite() {
           </div>
         </div>
       </nav>
+      {/* TradingView Ticker */}
+<div className="mt-[64px] w-full" dangerouslySetInnerHTML={{
+  __html: `
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+      {
+        "symbols": [
+          {"description": "ES - S&P 500", "proName": "FOREXCOM:SPXUSD"},
+          {"description": "NQ - Nasdaq", "proName": "FOREXCOM:NSXUSD"},
+          {"description": "YM - Dow Jones", "proName": "FOREXCOM:DJI"},
+          {"description": "6E - Euro", "proName": "FX_IDC:EURUSD"},
+          {"description": "6B - British Pound", "proName": "FX_IDC:GBPUSD"},
+          {"description": "6J - Japanese Yen", "proName": "FX_IDC:USDJPY"},
+          {"description": "6S - Swiss Franc", "proName": "FX_IDC:USDCHF"},
+          {"description": "6A - Australian Dollar", "proName": "FX_IDC:AUDUSD"},
+          {"description": "GC - Gold", "proName": "TVC:GOLD"},
+          {"description": "SI - Silver", "proName": "TVC:SILVER"},
+          {"description": "HG - Copper", "proName": "ECONOMICS:USCOPF"}
+        ],
+        "showSymbolLogo": true,
+        "isTransparent": true,
+        "displayMode": "adaptive",
+        "colorTheme": "light",
+        "locale": "en"
+      }
+      </script>
+    </div>
+  `
+}} />
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 py-32 text-center mt-20">
