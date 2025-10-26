@@ -52,7 +52,7 @@ export default function AuraWebsite() {
         "displayMode": "adaptive",
         "colorTheme": "light",
         "locale": "en",
-        "speed": 2
+        "speed": 5
       }
       </script>
     </div>
