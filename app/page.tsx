@@ -34,18 +34,19 @@ export default function AuraWebsite() {
       {
         "symbols": [
           {"description": "ES", "proName": "FOREXCOM:SPXUSD"},
-          {"description": "NQ", "proName": "FOREXCOM:NSXUSD"},
-          {"description": "YM", "proName": "FOREXCOM:DJI"},
           {"description": "6E", "proName": "FX_IDC:EURUSD"},
-          {"description": "6B", "proName": "FX_IDC:GBPUSD"},
-          {"description": "6J", "proName": "FX_IDC:USDJPY"},
-          {"description": "6S", "proName": "FX_IDC:USDCHF"},
-          {"description": "6A", "proName": "FX_IDC:AUDUSD"},
           {"description": "GC", "proName": "TVC:GOLD"},
-          {"description": "SI", "proName": "TVC:SILVER"},
+          {"description": "CL", "proName": "NYMEX:CL1!"},
           {"description": "BTC", "proName": "BINANCE:BTCUSDT"},
+          {"description": "NQ", "proName": "FOREXCOM:NSXUSD"},
+          {"description": "6J", "proName": "FX_IDC:USDJPY"},
+          {"description": "SI", "proName": "TVC:SILVER"},
           {"description": "ETH", "proName": "BINANCE:ETHUSDT"},
-          {"description": "SOL", "proName": "BINANCE:SOLUSDT"}
+          {"description": "YM", "proName": "FOREXCOM:DJI"},
+          {"description": "6B", "proName": "FX_IDC:GBPUSD"},
+          {"description": "SOL", "proName": "BINANCE:SOLUSDT"},
+          {"description": "6A", "proName": "FX_IDC:AUDUSD"},
+          {"description": "6S", "proName": "FX_IDC:USDCHF"}
         ],
         "showSymbolLogo": true,
         "isTransparent": true,
