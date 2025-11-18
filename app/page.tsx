@@ -14,11 +14,12 @@ export default function AuraWebsite() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="text-2xl">Aura✧</div>
+          <div className="text-2xl">No° x Aura✧</div>
           <div className="flex items-center gap-8">
             <a href="#features" className="text-sm hover:opacity-60 transition-opacity">Features</a>
             <a href="#pricing" className="text-sm hover:opacity-60 transition-opacity">Pricing</a>
-            <a href="https://x.com/Auratrades_" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">X</a>
+            <a href="https://x.com/Auratrades_" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Auratrades_</a>
+            <a href="https://x.com/Nodgree" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Nodgree</a>
             <button className="bg-[#0437f2] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0437f2]/80 transition-colors">
               Get Access
             </button>
@@ -216,9 +217,10 @@ export default function AuraWebsite() {
       <footer className="border-t border-black/10 py-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-2xl font-bold">Aura✧</div>
+            <div className="text-2xl font-bold">No° x Aura✧</div>
             <div className="flex items-center gap-8">
-              <a href="https://x.com/Auratrades_" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">X</a>
+              <a href="https://x.com/Auratrades_" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Auratrades_</a>
+              <a href="https://x.com/Nodgree" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Nodgree</a>
               <a href="#" className="text-sm hover:opacity-60 transition-opacity">Terms</a>
               <a href="#" className="text-sm hover:opacity-60 transition-opacity">Privacy</a>
             </div>
