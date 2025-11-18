@@ -19,45 +19,46 @@ export default function AuraWebsite() {
             <a href="#features" className="text-sm hover:opacity-60 transition-opacity">Features</a>
             <a href="#pricing" className="text-sm hover:opacity-60 transition-opacity">Pricing</a>
             <a href="https://x.com/Auratrades_" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">X</a>
-            <button className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-black/80 transition-colors">
+            <button className="bg-[#0437f2] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0437f2]/80 transition-colors">
               Get Access
             </button>
           </div>
         </div>
       </nav>
-{/* TradingView Ticker */}
-<div className="mt-[64px] w-full" dangerouslySetInnerHTML={{
-  __html: `
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-      {
-        "symbols": [
-          {"description": "ES", "proName": "FOREXCOM:SPXUSD"},
-          {"description": "6E", "proName": "FX_IDC:EURUSD"},
-          {"description": "GC", "proName": "TVC:GOLD"},
-          {"description": "BTC", "proName": "BINANCE:BTCUSDT"},
-          {"description": "NQ", "proName": "FOREXCOM:NSXUSD"},
-          {"description": "6J", "proName": "FX_IDC:USDJPY"},
-          {"description": "SI", "proName": "TVC:SILVER"},
-          {"description": "ETH", "proName": "BINANCE:ETHUSDT"},
-          {"description": "YM", "proName": "FOREXCOM:DJI"},
-          {"description": "6B", "proName": "FX_IDC:GBPUSD"},
-          {"description": "SOL", "proName": "BINANCE:SOLUSDT"},
-          {"description": "6A", "proName": "FX_IDC:AUDUSD"},
-          {"description": "6S", "proName": "FX_IDC:USDCHF"}
-        ],
-        "showSymbolLogo": true,
-        "isTransparent": true,
-        "displayMode": "adaptive",
-        "colorTheme": "light",
-        "locale": "en",
-        "speed": 7
-      }
-      </script>
-    </div>
-  `
-}} />
+
+      {/* TradingView Ticker */}
+      <div className="mt-[64px] w-full" dangerouslySetInnerHTML={{
+        __html: `
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+              "symbols": [
+                {"description": "ES", "proName": "FOREXCOM:SPXUSD"},
+                {"description": "6E", "proName": "FX_IDC:EURUSD"},
+                {"description": "GC", "proName": "TVC:GOLD"},
+                {"description": "BTC", "proName": "BINANCE:BTCUSDT"},
+                {"description": "NQ", "proName": "FOREXCOM:NSXUSD"},
+                {"description": "6J", "proName": "FX_IDC:USDJPY"},
+                {"description": "SI", "proName": "TVC:SILVER"},
+                {"description": "ETH", "proName": "BINANCE:ETHUSDT"},
+                {"description": "YM", "proName": "FOREXCOM:DJI"},
+                {"description": "6B", "proName": "FX_IDC:GBPUSD"},
+                {"description": "SOL", "proName": "BINANCE:SOLUSDT"},
+                {"description": "6A", "proName": "FX_IDC:AUDUSD"},
+                {"description": "6S", "proName": "FX_IDC:USDCHF"}
+              ],
+              "showSymbolLogo": true,
+              "isTransparent": true,
+              "displayMode": "adaptive",
+              "colorTheme": "light",
+              "locale": "en",
+              "speed": 7
+            }
+            </script>
+          </div>
+        `
+      }} />
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 py-32 text-center mt-20">
@@ -72,7 +73,7 @@ export default function AuraWebsite() {
             Stop manually marking charts… Aura&apos;s indicators automate Quarterly Theory and Smart Money Technique concepts with clean, aesthetic visuals that enhance your analysis…
           </p>
           
-          <button className="bg-black text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-black/80 transition-colors inline-flex items-center gap-2">
+          <button className="bg-[#0437f2] text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-[#0437f2]/80 transition-colors inline-flex items-center gap-2">
             Get Instant Access
             <span>→</span>
           </button>
@@ -133,7 +134,7 @@ export default function AuraWebsite() {
           </div>
 
           <div className="max-w-lg mx-auto">
-            <div className="bg-white rounded-2xl border-2 border-black p-12 text-center hover:shadow-2xl transition-shadow">
+            <div className="bg-white rounded-2xl border-2 border-[#0437f2] p-12 text-center hover:shadow-2xl transition-shadow">
               <div className="mb-8">
                 <h3 className="text-3xl font-bold mb-2">Aura✧ Complete</h3>
                 <p className="text-black/60">Everything you need to automate your analysis</p>
@@ -144,7 +145,7 @@ export default function AuraWebsite() {
                 <div className="text-black/60">per month</div>
               </div>
 
-              <button className="w-full bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-black/80 transition-colors mb-8">
+              <button className="w-full bg-[#0437f2] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#0437f2]/80 transition-colors mb-8">
                 Get Started Now
               </button>
 
@@ -203,7 +204,7 @@ export default function AuraWebsite() {
           <p className="text-xl text-black/70 mb-12 max-w-2xl mx-auto">
             Join traders who have automated their Quarterly Theory and SMT analysis with Aura✧
           </p>
-          <button className="bg-black text-white px-12 py-5 rounded-full text-lg font-medium hover:bg-black/80 transition-colors inline-flex items-center gap-3">
+          <button className="bg-[#0437f2] text-white px-12 py-5 rounded-full text-lg font-medium hover:bg-[#0437f2]/80 transition-colors inline-flex items-center gap-3">
             Get Instant Access
             <span className="text-2xl">→</span>
           </button>
