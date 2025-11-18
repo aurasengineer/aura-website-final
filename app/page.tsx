@@ -18,8 +18,8 @@ export default function AuraWebsite() {
           <div className="flex items-center gap-8">
             <a href="#features" className="text-sm hover:opacity-60 transition-opacity">Features</a>
             <a href="#pricing" className="text-sm hover:opacity-60 transition-opacity">Pricing</a>
-            <a href="https://x.com/Auratrades_" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Auratrades_</a>
             <a href="https://x.com/Nodgree" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Nodgree</a>
+            <a href="https://x.com/Auratrades_" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Auratrades_</a>
             <button className="bg-[#0437f2] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0437f2]/80 transition-colors">
               Get Access
             </button>
@@ -71,7 +71,7 @@ export default function AuraWebsite() {
             Automated...
           </h1>
           <p className="text-xl text-black/70 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Stop manually marking charts… Aura&apos;s indicators automate Quarterly Theory and Smart Money Technique concepts with clean, aesthetic visuals that enhance your analysis…
+            Stop manually marking charts… No°&apos;s indicators automate Quarterly Theory and Smart Money Technique concepts with clean, aesthetic visuals that enhance your analysis…
           </p>
           
           <button className="bg-[#0437f2] text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-[#0437f2]/80 transition-colors inline-flex items-center gap-2">
@@ -219,8 +219,8 @@ export default function AuraWebsite() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-2xl font-bold">No° x Aura✧</div>
             <div className="flex items-center gap-8">
-              <a href="https://x.com/Auratrades_" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Auratrades_</a>
               <a href="https://x.com/Nodgree" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Nodgree</a>
+              <a href="https://x.com/Auratrades_" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Auratrades_</a>
               <a href="#" className="text-sm hover:opacity-60 transition-opacity">Terms</a>
               <a href="#" className="text-sm hover:opacity-60 transition-opacity">Privacy</a>
             </div>
