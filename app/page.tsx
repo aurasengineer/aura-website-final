@@ -36,7 +36,6 @@ export default function AuraWebsite() {
           {"description": "ES", "proName": "FOREXCOM:SPXUSD"},
           {"description": "6E", "proName": "FX_IDC:EURUSD"},
           {"description": "GC", "proName": "TVC:GOLD"},
-          {"description": "CL", "proName": "NYMEX:CL1!"},
           {"description": "BTC", "proName": "BINANCE:BTCUSDT"},
           {"description": "NQ", "proName": "FOREXCOM:NSXUSD"},
           {"description": "6J", "proName": "FX_IDC:USDJPY"},
