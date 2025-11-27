@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 export default function AuraWebsite() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<string>('ssmt');
+  const [ssmatOpen, setSSMTOpen] = useState<boolean>(true);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -14,7 +16,7 @@ export default function AuraWebsite() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="text-2xl">No°</div>
+          <div className="text-2xl">No° x Aura✧</div>
           <div className="flex items-center gap-8">
             <a href="#features" className="text-sm hover:opacity-60 transition-opacity">Features</a>
             <a href="#pricing" className="text-sm hover:opacity-60 transition-opacity">Pricing</a>
@@ -71,7 +73,7 @@ export default function AuraWebsite() {
             Automated...
           </h1>
           <p className="text-xl text-black/70 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Stop manually marking charts… No°&apos;s indicators automate Quarterly Theory and Smart Money Technique concepts with clean, aesthetic visuals that enhance your analysis…
+            Stop manually marking charts… Aura&apos;s indicators automate Quarterly Theory and Smart Money Technique concepts with clean, aesthetic visuals that enhance your analysis…
           </p>
           
           <button className="bg-[#0437f2] text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-[#0437f2]/80 transition-colors inline-flex items-center gap-2">
@@ -80,15 +82,92 @@ export default function AuraWebsite() {
           </button>
           <p className="text-sm text-black/50 mt-4">Join traders automating their edge</p>
         </div>
+      </section>
 
-        {/* Chart Preview */}
-        <div className="mt-20 max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-gray-50 to-gray-100 border border-black/10 rounded-2xl p-8 shadow-2xl">
-            <div className="bg-white rounded-xl border border-black/10 aspect-video flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4">📈</div>
-                <p className="text-black/40 text-sm">TradingView Chart Preview</p>
-                <p className="text-black/30 text-xs mt-2">Your indicators in action</p>
+      {/* Interactive Indicator Showcase */}
+      <section className="bg-white py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold mb-6">Everything You Need. Fully Automated.</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Left Side - Tabs */}
+            <div className="space-y-3">
+              {/* SSMT with Dropdown */}
+              <div className="border border-black/10 rounded-xl overflow-hidden">
+                <button 
+                  onClick={() => {
+                    setActiveTab('ssmt');
+                    setSSMTOpen(!ssmatOpen);
+                  }}
+                  className={`w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors ${activeTab.startsWith('ssmt') ? 'bg-gray-50' : ''}`}
+                >
+                  <span className="font-medium text-lg">SSMT</span>
+                  <span className="text-xl">{ssmatOpen ? '−' : '+'}</span>
+                </button>
+                {ssmatOpen && (
+                  <div className="border-t border-black/10 bg-gray-50/50">
+                    {['Dashed', 'Dotted', 'Solid', 'Blank'].map((sub) => (
+                      <button
+                        key={sub}
+                        onClick={() => setActiveTab(`ssmt-${sub.toLowerCase()}`)}
+                        className={`w-full px-8 py-3 text-left hover:bg-gray-100 transition-colors text-black/70 ${activeTab === `ssmt-${sub.toLowerCase()}` ? 'bg-gray-100 text-black font-medium' : ''}`}
+                      >
+                        {sub}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Other Tabs */}
+              {['PSP', 'HTF PSP x SMT Candles', 'IFVG', 'Main Chart Candle SMT', 'Alerts'].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => {
+                    setActiveTab(tab.toLowerCase().replace(/ /g, '-'));
+                    setSSMTOpen(false);
+                  }}
+                  className={`w-full px-6 py-4 flex items-center justify-between text-left border border-black/10 rounded-xl hover:bg-gray-50 transition-colors ${activeTab === tab.toLowerCase().replace(/ /g, '-') ? 'bg-gray-50' : ''}`}
+                >
+                  <span className="font-medium text-lg">{tab}</span>
+                  <span className="text-xl">→</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Right Side - Display Area */}
+            <div className="border border-black/10 rounded-2xl p-8 bg-gray-50/50 min-h-[500px] flex flex-col">
+              <p className="font-bold text-lg mb-6">
+                {activeTab === 'ssmt' && 'Sequential SMT Detection'}
+                {activeTab === 'ssmt-dashed' && 'SSMT Dashed Style'}
+                {activeTab === 'ssmt-dotted' && 'SSMT Dotted Style'}
+                {activeTab === 'ssmt-solid' && 'SSMT Solid Style'}
+                {activeTab === 'ssmt-blank' && 'SSMT Blank Style'}
+                {activeTab === 'psp' && 'PSP Detection'}
+                {activeTab === 'htf-psp-x-smt-candles' && 'HTF PSP x SMT Candles'}
+                {activeTab === 'ifvg' && 'IFVG Detection'}
+                {activeTab === 'main-chart-candle-smt' && 'Main Chart Candle SMT'}
+                {activeTab === 'alerts' && 'Custom Alerts'}
+              </p>
+              <div className="flex-1 bg-white rounded-xl border border-black/10 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="text-6xl mb-4">📈</div>
+                  <p className="text-black/40 text-sm">
+                    {activeTab === 'ssmt' && 'Sequential SMT indicator preview'}
+                    {activeTab === 'ssmt-dashed' && 'Dashed line style preview'}
+                    {activeTab === 'ssmt-dotted' && 'Dotted line style preview'}
+                    {activeTab === 'ssmt-solid' && 'Solid line style preview'}
+                    {activeTab === 'ssmt-blank' && 'Blank style preview'}
+                    {activeTab === 'psp' && 'PSP indicator preview'}
+                    {activeTab === 'htf-psp-x-smt-candles' && 'HTF PSP x SMT Candles preview'}
+                    {activeTab === 'ifvg' && 'IFVG indicator preview'}
+                    {activeTab === 'main-chart-candle-smt' && 'Main Chart Candle SMT preview'}
+                    {activeTab === 'alerts' && 'Alerts configuration preview'}
+                  </p>
+                  <p className="text-black/30 text-xs mt-2">Your indicator image here</p>
+                </div>
               </div>
             </div>
           </div>
@@ -126,77 +205,77 @@ export default function AuraWebsite() {
       </section>
 
       {/* Pricing Section */}
-<section id="pricing" className="bg-white py-32">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="text-center mb-20">
-      <p className="text-sm uppercase tracking-widest text-black/60 mb-4">Pricing</p>
-      <h2 className="text-5xl font-bold mb-6">Choose Your Plan</h2>
-      <p className="text-xl text-black/60">Full access to indicators and future updates</p>
-    </div>
+      <section id="pricing" className="bg-white py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <p className="text-sm uppercase tracking-widest text-black/60 mb-4">Pricing</p>
+            <h2 className="text-5xl font-bold mb-6">Choose Your Plan</h2>
+            <p className="text-xl text-black/60">Full access to indicators and future updates</p>
+          </div>
 
-    <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-      {/* Plan 1: Quarterly Theory x SMT */}
-      <div className="bg-white rounded-2xl border-2 border-black/20 p-12 text-center hover:shadow-2xl transition-shadow">
-        <div className="mb-8">
-          <h3 className="text-3xl font-bold mb-2">Quarterly Theory x SMT</h3>
-          <p className="text-black/60">Essential indicators for QT & SMT</p>
-        </div>
-        
-        <div className="mb-8">
-          <div className="text-6xl font-bold mb-2">$50</div>
-          <div className="text-black/60">per month</div>
-        </div>
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            {/* Plan 1: Quarterly Theory x SMT */}
+            <div className="bg-white rounded-2xl border-2 border-black/20 p-12 text-center hover:shadow-2xl transition-shadow">
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold mb-2">Quarterly Theory x SMT</h3>
+                <p className="text-black/60">Essential indicators for QT & SMT</p>
+              </div>
+              
+              <div className="mb-8">
+                <div className="text-6xl font-bold mb-2">$50</div>
+                <div className="text-black/60">per month</div>
+              </div>
 
-        <button className="w-full bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-black/80 transition-colors mb-8">
-          Get Started
-        </button>
+              <button className="w-full bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-black/80 transition-colors mb-8">
+                Get Started
+              </button>
 
-        <div className="space-y-4 text-left">
-          {['Quarterly Theory indicator suite', 'SMT divergence detection', 'Works on all assets and timeframes', 'Private TradingView script access', 'Setup documentation', 'All future updates'].map((feature, i) => (
-            <div key={i} className="flex items-start gap-3">
-              <span className="text-black mt-1">✓</span>
-              <span className="text-black/80">{feature}</span>
+              <div className="space-y-4 text-left">
+                {['Quarterly Theory indicator suite', 'SMT divergence detection', 'Works on all assets and timeframes', 'Private TradingView script access', 'Setup documentation', 'All future updates'].map((feature, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="text-black mt-1">✓</span>
+                    <span className="text-black/80">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-black/10">
+                <p className="text-sm text-black/60">14-day money-back guarantee</p>
+              </div>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-8 pt-8 border-t border-black/10">
-          <p className="text-sm text-black/60">14-day money-back guarantee</p>
-        </div>
-      </div>
+            {/* Plan 2: Aura Complete */}
+            <div className="bg-white rounded-2xl border-2 border-[#0437f2] p-12 text-center hover:shadow-2xl transition-shadow">
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold mb-2">Aura✧ Complete</h3>
+                <p className="text-black/60">Everything you need to automate your analysis</p>
+              </div>
+              
+              <div className="mb-8">
+                <div className="text-6xl font-bold mb-2">$75</div>
+                <div className="text-black/60">per month</div>
+              </div>
 
-      {/* Plan 2: Aura Complete */}
-      <div className="bg-white rounded-2xl border-2 border-[#0437f2] p-12 text-center hover:shadow-2xl transition-shadow">
-        <div className="mb-8">
-          <h3 className="text-3xl font-bold mb-2">Aura✧ Complete</h3>
-          <p className="text-black/60">Everything you need to automate your analysis</p>
-        </div>
-        
-        <div className="mb-8">
-          <div className="text-6xl font-bold mb-2">$75</div>
-          <div className="text-black/60">per month</div>
-        </div>
+              <button className="w-full bg-[#0437f2] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#0437f2]/80 transition-colors mb-8">
+                Get Started Now
+              </button>
 
-        <button className="w-full bg-[#0437f2] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#0437f2]/80 transition-colors mb-8">
-          Get Started Now
-        </button>
+              <div className="space-y-4 text-left">
+                {['Full Quarterly Theory indicator suite', 'SMT divergence detection across all triads', 'Works on all assets and timeframes', 'Private TradingView script access', 'Detailed setup documentation', 'Discord community access', 'All future indicator updates', 'Priority support'].map((feature, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="text-black mt-1">✓</span>
+                    <span className="text-black/80">{feature}</span>
+                  </div>
+                ))}
+              </div>
 
-        <div className="space-y-4 text-left">
-          {['Full Quarterly Theory indicator suite', 'SMT divergence detection across all triads', 'Works on all assets and timeframes', 'Private TradingView script access', 'Detailed setup documentation', 'Discord community access', 'All future indicator updates', 'Priority support'].map((feature, i) => (
-            <div key={i} className="flex items-start gap-3">
-              <span className="text-black mt-1">✓</span>
-              <span className="text-black/80">{feature}</span>
+              <div className="mt-8 pt-8 border-t border-black/10">
+                <p className="text-sm text-black/60">14-day money-back guarantee</p>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
-
-        <div className="mt-8 pt-8 border-t border-black/10">
-          <p className="text-sm text-black/60">14-day money-back guarantee</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* FAQ Section */}
       <section className="bg-gray-50 py-32">
@@ -248,7 +327,7 @@ export default function AuraWebsite() {
       <footer className="border-t border-black/10 py-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-2xl font-bold">No°</div>
+            <div className="text-2xl font-bold">No° x Aura✧</div>
             <div className="flex items-center gap-8">
               <a href="https://x.com/Nodgree" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Nodgree</a>
               <a href="https://x.com/Auratrades_" target="_blank" rel="noopener noreferrer" className="text-sm hover:opacity-60 transition-opacity">@Auratrades_</a>
