@@ -126,46 +126,77 @@ export default function AuraWebsite() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="bg-white py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
-            <p className="text-sm uppercase tracking-widest text-black/60 mb-4">Pricing</p>
-            <h2 className="text-5xl font-bold mb-6">One Simple Price</h2>
-            <p className="text-xl text-black/60">Full access to all indicators and future updates</p>
-          </div>
+<section id="pricing" className="bg-white py-32">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-20">
+      <p className="text-sm uppercase tracking-widest text-black/60 mb-4">Pricing</p>
+      <h2 className="text-5xl font-bold mb-6">Choose Your Plan</h2>
+      <p className="text-xl text-black/60">Full access to indicators and future updates</p>
+    </div>
 
-          <div className="max-w-lg mx-auto">
-            <div className="bg-white rounded-2xl border-2 border-[#0437f2] p-12 text-center hover:shadow-2xl transition-shadow">
-              <div className="mb-8">
-                <h3 className="text-3xl font-bold mb-2">Aura✧ Complete</h3>
-                <p className="text-black/60">Everything you need to automate your analysis</p>
-              </div>
-              
-              <div className="mb-8">
-                <div className="text-6xl font-bold mb-2">$75</div>
-                <div className="text-black/60">per month</div>
-              </div>
-
-              <button className="w-full bg-[#0437f2] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#0437f2]/80 transition-colors mb-8">
-                Get Started Now
-              </button>
-
-              <div className="space-y-4 text-left">
-                {['Full Quarterly Theory indicator suite', 'SMT divergence detection across all triads', 'Works on all assets and timeframes', 'Private TradingView script access', 'Detailed setup documentation', 'Discord community access', 'All future indicator updates', 'Priority support'].map((feature, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="text-black mt-1">✓</span>
-                    <span className="text-black/80">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-black/10">
-                <p className="text-sm text-black/60">14-day money-back guarantee</p>
-              </div>
-            </div>
-          </div>
+    <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      {/* Plan 1: Quarterly Theory x SMT */}
+      <div className="bg-white rounded-2xl border-2 border-black/20 p-12 text-center hover:shadow-2xl transition-shadow">
+        <div className="mb-8">
+          <h3 className="text-3xl font-bold mb-2">Quarterly Theory x SMT</h3>
+          <p className="text-black/60">Essential indicators for QT & SMT</p>
         </div>
-      </section>
+        
+        <div className="mb-8">
+          <div className="text-6xl font-bold mb-2">$50</div>
+          <div className="text-black/60">per month</div>
+        </div>
+
+        <button className="w-full bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-black/80 transition-colors mb-8">
+          Get Started
+        </button>
+
+        <div className="space-y-4 text-left">
+          {['Quarterly Theory indicator suite', 'SMT divergence detection', 'Works on all assets and timeframes', 'Private TradingView script access', 'Setup documentation', 'All future updates'].map((feature, i) => (
+            <div key={i} className="flex items-start gap-3">
+              <span className="text-black mt-1">✓</span>
+              <span className="text-black/80">{feature}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-black/10">
+          <p className="text-sm text-black/60">14-day money-back guarantee</p>
+        </div>
+      </div>
+
+      {/* Plan 2: Aura Complete */}
+      <div className="bg-white rounded-2xl border-2 border-[#0437f2] p-12 text-center hover:shadow-2xl transition-shadow">
+        <div className="mb-8">
+          <h3 className="text-3xl font-bold mb-2">Aura✧ Complete</h3>
+          <p className="text-black/60">Everything you need to automate your analysis</p>
+        </div>
+        
+        <div className="mb-8">
+          <div className="text-6xl font-bold mb-2">$75</div>
+          <div className="text-black/60">per month</div>
+        </div>
+
+        <button className="w-full bg-[#0437f2] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#0437f2]/80 transition-colors mb-8">
+          Get Started Now
+        </button>
+
+        <div className="space-y-4 text-left">
+          {['Full Quarterly Theory indicator suite', 'SMT divergence detection across all triads', 'Works on all assets and timeframes', 'Private TradingView script access', 'Detailed setup documentation', 'Discord community access', 'All future indicator updates', 'Priority support'].map((feature, i) => (
+            <div key={i} className="flex items-start gap-3">
+              <span className="text-black mt-1">✓</span>
+              <span className="text-black/80">{feature}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-black/10">
+          <p className="text-sm text-black/60">14-day money-back guarantee</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FAQ Section */}
       <section className="bg-gray-50 py-32">
